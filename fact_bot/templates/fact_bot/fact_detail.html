@@ -1,0 +1,9 @@
+{% extends 'fact_bot/base.html' %}
+
+{% block content %}
+    <div class="post">
+        <h1>{{ fact }}</h1>
+        <h3>{{ fact.created_date }}</h3>
+        <a class="btn btn-default" href="{% url 'fact_remove' pk=fact.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+    </div>
+{% endblock %}

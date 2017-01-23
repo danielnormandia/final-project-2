@@ -1,0 +1,39 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>MyBot</title>
+  <link rel="stylesheet" href="{% static 'css/fact_bot_portal.css' %}">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+<body>
+  <div>
+
+
+    <div class="page-header">
+      <div>
+        <h1>MY BOT</h1>
+        <h2>IS GREAT</h2>
+      </div>
+    </div>
+
+    <div class="content container">
+      <div class="row">
+        <div class="col-md-8">
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <a href="{% url 'fact_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+    </footer>
+
+  </div>
+
+</body>
+</html>
